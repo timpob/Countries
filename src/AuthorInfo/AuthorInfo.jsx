@@ -6,6 +6,7 @@ const AuthorInfo = () => {
     return (
         <div className='author'>
             <img src={AuthorPhoto} alt="Author" className="author-photo"/>
+            <div>Hi, im Tim</div>
             <div className="author-info">
                 <div className="author-links">
                     <a href="https://www.linkedin.com/in/pobolov-tymur" target="_blank" rel="noopener noreferrer" className="author-link">
