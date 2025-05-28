@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #c7c7c7;
+    font-family: Arial, sans-serif;
+}
+
+.application {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+        "header header"
+        "random random"
+        "countries info";
+    gap: 5px;
+    padding: 5px;
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+}
+
+.random {
+    grid-area: random;
+}
+
+.countries {
+    grid-area: countries;
+}
+
+.country-info {
+    grid-area: info;
+}
+
+img {
+    height: 150px;
+    margin: 5px;
+    display: block;
+}
+
+.header div {
+    display: inline-block;
+    margin: 5px;
+}

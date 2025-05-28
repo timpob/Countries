@@ -1,0 +1,120 @@
+.info {
+    background: #EAE7DC;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 300px;
+    overflow: hidden;
+}
+
+.country-content {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+}
+
+.country-flag {
+    width: 160px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.country-flag img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.coat-of-arms {
+    max-height: 120px;
+    width: 100%;
+    object-fit: contain;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.country-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    background: #B2BDA0;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #36221b;
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.info-value {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #36221b;
+}
+
+.map-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #36221b;
+    padding: 10px;
+    background: #B2BDA0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.map-link span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.map-link:hover {
+    background: #2E4600;
+    color: #EAE7DC;
+}
+
+.map-link img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+/* Медиа-запрос для маленьких экранов */
+@media screen and (max-width: 768px) {
+    .info {
+        height: 300px;
+    }
+
+    .country-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .country-flag {
+        width: 100%;
+    }
+
+    .country-details {
+        overflow-y: visible;
+    }
+}

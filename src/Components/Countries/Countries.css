@@ -1,0 +1,55 @@
+.countries {
+    background: #36221b;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    height: 300px;
+    scrollbar-width: thin;
+    scrollbar-color: #2E4600 #EAE7DC;
+}
+
+.countries::-webkit-scrollbar {
+    width: 8px;
+}
+
+.countries::-webkit-scrollbar-track {
+    background: #EAE7DC;
+    border-radius: 4px;
+}
+
+.countries::-webkit-scrollbar-thumb {
+    background: #2E4600;
+    border-radius: 4px;
+}
+
+.countries::-webkit-scrollbar-thumb:hover {
+    background: #36221b;
+}
+
+.countries-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.country-item {
+    padding: 4px 8px;
+    background: #EAE7DC;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    margin: 2px;
+    color: #36221b;
+}
+
+.country-item.active {
+    background: #2E4600;
+    color: #EAE7DC;
+}
+
+.country-item:hover {
+    background: #B2BDA0;
+    color: #36221b;
+}
