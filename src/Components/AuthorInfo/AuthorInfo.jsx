@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthorPhoto from '../imgs/photo_2025-05-11_21-05-36.jpg';
+import AuthorPhoto from '../../imgs/photo_2025-05-11_21-05-36.jpg';
 import './AuthorInfo.css';
 
 const AuthorInfo = () => {

@@ -1,12 +1,11 @@
 .header {
     background: #EAE7DC;
     border-radius: 30px;
-    padding: 12px;
+    padding: 8px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    gap: 4px;
+    gap: 8px;
     flex-wrap: wrap;
 }
 
@@ -38,13 +37,33 @@
 
 .header div {
     padding: 6px 10px;
-    border-radius: 30px;
+    border-radius: 50px;
     background-color: #c7c7c7;
     transition: all 0.3s ease;
     cursor: pointer;
-    width: auto;
-    min-width: 80px;
+    width: 120px;
+    min-width: 10px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    overflow: hidden;
+}
+
+.header div img {
+    height: 25px;
+    margin: 0;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.header div a {
+    text-decoration: none;
+    color: #36221b;
+    font-weight: 500;
+    transition: color 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    flex-grow: 1;
+    text-align: left;
 }
 
 .header div.active {
@@ -56,11 +75,21 @@
 }
 
 .header div:last-child {
+    margin-left: unset;
     margin-right: 0;
 }
 
 .header div:hover {
     background: #B2BDA0;
+}
+
+.header div:hover img {
+    transform: translateX(83px);
+}
+
+.header div:hover a {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .header a {

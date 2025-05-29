@@ -6,7 +6,7 @@ import {connect} from "react-redux";
 import React, {useEffect, useState} from "react";
 import CountryInfo from "./Components/CountryInfo/CountryInfo";
 import {Routes, Route, BrowserRouter, Navigate} from 'react-router-dom';
-import AuthorInfo from "./AuthorInfo/AuthorInfo";
+import AuthorInfo from "./Components/AuthorInfo/AuthorInfo";
 import RandomCountry from "./Components/RandomCountry/RandomCountry";
 
 export const ThemeContext = React.createContext();
