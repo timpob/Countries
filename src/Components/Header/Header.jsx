@@ -8,6 +8,7 @@ import Africa from '../../imgs/regions/Africa.png';
 import Asia from '../../imgs/regions/Asia.png';
 import Americas from '../../imgs/regions/America.png';
 import Oceania from '../../imgs/regions/Oceania.png';
+import Author from '../../imgs/regions/Author.png';
 
 export const HeaderContext = React.createContext();
 
@@ -43,7 +44,7 @@ const Header = (props) => {
                 <NavLink to={`/country-info`}>Oceania</NavLink>
             </div>
 
-            <div><NavLink to={`/author`}>About author</NavLink></div>
+            <div><img src={Author} alt="Author"/><NavLink to={`/author`}>About me</NavLink></div>
         </div>
     );
 };

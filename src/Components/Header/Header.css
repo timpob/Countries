@@ -1,10 +1,10 @@
 .header {
-    background: #EAE7DC;
+    background: #1e1e2f;
     border-radius: 30px;
     padding: 8px;
     display: flex;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     gap: 8px;
     flex-wrap: wrap;
 }
@@ -16,29 +16,10 @@
     gap: 4px;
 }
 
-/* Стили для скроллбара в Chrome/Safari */
-.header::-webkit-scrollbar {
-    height: 8px;
-}
-
-.header::-webkit-scrollbar-track {
-    background: #EAE7DC;
-    border-radius: 4px;
-}
-
-.header::-webkit-scrollbar-thumb {
-    background: #2E4600;
-    border-radius: 4px;
-}
-
-.header::-webkit-scrollbar-thumb:hover {
-    background: #36221b;
-}
-
 .header div {
     padding: 6px 10px;
     border-radius: 50px;
-    background-color: #c7c7c7;
+    background-color: #f0f0f5;
     transition: all 0.3s ease;
     cursor: pointer;
     width: 120px;
@@ -48,6 +29,7 @@
     align-items: center;
     gap: 5px;
     overflow: hidden;
+    height: 35px;
 }
 
 .header div img {
@@ -59,56 +41,35 @@
 
 .header div a {
     text-decoration: none;
-    color: #36221b;
+    color: #1e1e2f;
     font-weight: 500;
-    transition: color 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
     flex-grow: 1;
     text-align: left;
-}
-
-.header div.active {
-    background: #2E4600;
-}
-
-.header div.active a {
-    color: #EAE7DC;
-}
-
-.header div:last-child {
-    margin-left: unset;
-    margin-right: 0;
-}
-
-.header div:hover {
-    background: #B2BDA0;
-}
-
-.header div:hover img {
-    transform: translateX(83px);
-}
-
-.header div:hover a {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.header a {
-    text-decoration: none;
-    color: #36221b;
-    font-weight: 500;
     transition: color 0.3s ease;
 }
 
-.header div:hover a {
-    color: #36221b;
+.header div:hover {
+    background-color: #b4b5c9;
 }
 
-/* Медиа-запрос для маленьких экранов */
+.header div:hover img {
+    transform: scale(1.1);
+}
+
+.header div.active {
+    background: #5072c2;
+}
+
+.header div.active a {
+    color: white;
+}
+
+/* Медиа-запрос для планшетов и маленьких экранов */
 @media screen and (max-width: 800px) {
     .header {
         justify-content: center;
     }
-    
+
     .header div {
         min-width: 70px;
         padding: 6px 8px;

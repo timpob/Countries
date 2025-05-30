@@ -1,55 +1,58 @@
 .countries {
-    background: #36221b;
-    border-radius: 8px;
-    padding: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: auto;
-    height: 300px;
+    background: #1e1e2f;
+    border-radius: 30px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    max-height: 270px;
     scrollbar-width: thin;
-    scrollbar-color: #2E4600 #EAE7DC;
+    scrollbar-color: #b4b5c9 #f0f0f5;
 }
 
 .countries::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
 }
 
 .countries::-webkit-scrollbar-track {
-    background: #EAE7DC;
+    background: #f0f0f5;
     border-radius: 4px;
 }
 
 .countries::-webkit-scrollbar-thumb {
-    background: #2E4600;
+    background: #b4b5c9;
     border-radius: 4px;
 }
 
 .countries::-webkit-scrollbar-thumb:hover {
-    background: #36221b;
+    background: #5072c2;
 }
 
 .countries-list {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 6px;
 }
 
 .country-item {
-    padding: 4px 8px;
-    background: #EAE7DC;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 14px;
+    padding: 2px;
     margin: 2px;
-    color: #36221b;
-}
-
-.country-item.active {
-    background: #2E4600;
-    color: #EAE7DC;
+    background: #f0f0f5;
+    color: #1e1e2f;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
 .country-item:hover {
-    background: #B2BDA0;
-    color: #36221b;
+    background: #b4b5c9;
+    color: #1e1e2f;
 }
+
+.country-item.active {
+    background: #5072c2;
+    color: white;
+}
+

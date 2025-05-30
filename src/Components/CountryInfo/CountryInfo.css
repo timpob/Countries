@@ -1,12 +1,11 @@
 .info {
-    background: #EAE7DC;
-    border-radius: 8px;
-    padding: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: 300px;
+    background: #1e1e2f;
+    border-radius: 30px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    max-height: 270px;
     overflow: hidden;
 }
-
 .country-content {
     display: flex;
     gap: 20px;
@@ -18,14 +17,16 @@
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
 
 .country-flag img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: #f0f0f5;
+    padding: 4px;
 }
 
 .coat-of-arms {
@@ -34,6 +35,8 @@
     object-fit: contain;
     padding: 10px;
     box-sizing: border-box;
+    background-color: #f0f0f5;
+    border-radius: 12px;
 }
 
 .country-details {
@@ -47,16 +50,20 @@
 .info-item {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 8px;
-    background: #B2BDA0;
-    border-radius: 6px;
-    width: 100%;
+    gap: 10px;
+    padding: 10px 14px;
+    background: #f0f0f5;
+    border-radius: 50px;
+    transition: background 0.3s ease;
+}
+
+.info-item:hover {
+    background: #b4b5c9;
 }
 
 .info-label {
     font-weight: 600;
-    color: #36221b;
+    color: #1e1e2f;
     width: 100px;
     flex-shrink: 0;
 }
@@ -66,7 +73,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: #36221b;
+    color: #1e1e2f;
 }
 
 .map-link {
@@ -74,35 +81,33 @@
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    color: #36221b;
-    padding: 10px;
-    background: #B2BDA0;
-    border-radius: 8px;
+    color: #1e1e2f;
+    padding: 10px 14px;
+    background: #f0f0f5;
+    border-radius: 50px;
     transition: all 0.3s ease;
-    width: 100%;
-}
-
-.map-link span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .map-link:hover {
-    background: #2E4600;
-    color: #EAE7DC;
+    background: #5072c2;
+    color: white;
+}
+
+.map-link:hover img {
+    filter: brightness(0) invert(1);
 }
 
 .map-link img {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     flex-shrink: 0;
+    transition: filter 0.3s ease;
 }
 
-/* Медиа-запрос для маленьких экранов */
+/* Медиа-запрос для мобильных */
 @media screen and (max-width: 768px) {
     .info {
-        height: 300px;
+        max-height: 100%;
     }
 
     .country-content {
@@ -112,6 +117,9 @@
 
     .country-flag {
         width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
     }
 
     .country-details {
