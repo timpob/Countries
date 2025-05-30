@@ -13,7 +13,7 @@ const RandomCountry = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             dispatch(setRandomCountryDetailsAC());
-        }, 3000);
+        }, 10000);
 
         return () => clearInterval(interval);
     }, []);

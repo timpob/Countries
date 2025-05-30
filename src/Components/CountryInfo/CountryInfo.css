@@ -15,18 +15,18 @@
 }
 
 .country-flag {
-    width: 120px;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    width: 100px;
+    height: 100px; /* Добавлено фиксированная высота */
 }
 
 .country-flag img {
     width: 100%;
-    height: auto;
+    height: 100%; /* Заполняем весь контейнер */
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: #2c2c40;
+    padding: 4px;
+    object-fit: contain; /* Вписываем картинку без искажения */
 }
 
 .coat-of-arms {
@@ -120,6 +120,8 @@
         align-items: center;
         justify-content: center;
         gap: 20px;
+        flex-shrink: 0;
+        display: flex;
     }
 
     .country-flag img {
