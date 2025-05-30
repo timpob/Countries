@@ -21,8 +21,6 @@ const RandomCountry = () => {
     const spinner = loadingRandomCountry ? <Spinner/> : null;
     const content = !loadingRandomCountry ? <RandomCountryView details={randomCountryDetails}/> : null;
 
-
-
     return (
         <div className='random'>
             {spinner}
@@ -31,46 +29,41 @@ const RandomCountry = () => {
     );
 };
 
-
-
 const RandomCountryView = ({details}) => {
     return (
         <>
-            <div className="country-content">
-                <div className="country-flag">
-                    <img src={details.flagLink} alt="flag"/>
-                    {details.crestLink ?
-                        <img
-                            src={details.crestLink}
-                            alt="coat of arms"
-                            className="coat-of-arms"
-                        />
-                        : null
-                    }
+            <div className="country-content-random">
+                <div className="country-left">
+                    <div className="country-flag-random">
+                        <img src={details.flagLink} alt="flag"/>
+                    </div>
+                    {details.crestLink && (
+                        <div className="coat-of-arms-random">
+                            <img src={details.crestLink} alt="coat of arms"/>
+                        </div>
+                    )}
                 </div>
-                <div className="country-info">
-                    <div className="info-item">
+
+                <div className="country-info-random">
+                    <div className="info-item-random">
                         <span className="label">Страна:</span>
                         <span>{details.country}</span>
                     </div>
-                    <div className="info-item">
+                    <div className="info-item-random">
                         <span className="label">Население:</span>
                         <span>{details.population?.toLocaleString()} чел.</span>
                     </div>
-                    <div className="info-item">
+                    <div className="info-item-random">
                         <span className="label">Площадь:</span>
                         <span>{details.area?.toLocaleString()} км²</span>
                     </div>
-                    <div className="info-item">
+                    <div className="info-item-random">
                         <span className="label">Столица:</span>
                         <span>{details.capital}</span>
                     </div>
-                    <a href={details.mapLink} target="_blank" className="map-link">
-                        <img src={mapIcon} alt="mapLink"/>
-                        <span>Открыть на карте</span>
-                    </a>
                 </div>
             </div>
+
         </>
     );
 };

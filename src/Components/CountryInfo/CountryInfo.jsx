@@ -35,7 +35,7 @@ const CountryInfoView = (props) => {
                     <img src={props.flagLink} alt="flag"/>
                     {props.crestLink ? <img src={props.crestLink} alt="coat of arms" className="coat-of-arms"/> : null}
                 </div>
-                <div className="country-details">
+                <div className="country-info">
                     <div className="info-item">
                         <span className="label">Население:</span>
                         <span className="value">{props.population?.toLocaleString()} чел.</span>
